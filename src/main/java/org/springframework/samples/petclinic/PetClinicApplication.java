@@ -18,9 +18,8 @@ package org.springframework.samples.petclinic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ImportRuntimeHints;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * PetClinic Spring Boot Application.
@@ -30,17 +29,11 @@ import org.springframework.context.annotation.ImportRuntimeHints;
  */
 @SpringBootApplication
 @ImportRuntimeHints(PetClinicRuntimeHints.class)
-@RestController("/spring-petclinic-3.0.0-SNAPSHOT")
-public class PetClinicApplication extends SpringBootServletInitializer {
+@RestController("/spring-petclinic-3.0.0-SNAPSHOT/")
+public class PetClinicApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PetClinicApplication.class, args);
-	}
-
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(PetClinicApplication.class); // Replace DemoApplication
-																// with your main class
 	}
 
 }
