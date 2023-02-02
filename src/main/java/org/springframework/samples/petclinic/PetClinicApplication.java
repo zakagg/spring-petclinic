@@ -19,7 +19,6 @@ package org.springframework.samples.petclinic;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ImportRuntimeHints;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  * PetClinic Spring Boot Application.
@@ -29,7 +28,6 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @SpringBootApplication
 @ImportRuntimeHints(PetClinicRuntimeHints.class)
-@RestController("/spring-petclinic-3.0.0-SNAPSHOT/")
 public class PetClinicApplication {
 
 	public static void main(String[] args) {
