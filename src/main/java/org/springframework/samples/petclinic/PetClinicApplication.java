@@ -30,6 +30,7 @@ import org.springframework.context.annotation.ImportRuntimeHints;
  */
 @SpringBootApplication
 @ImportRuntimeHints(PetClinicRuntimeHints.class)
+@RestController("/spring-petclinic-3.0.0-SNAPSHOT")
 public class PetClinicApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
